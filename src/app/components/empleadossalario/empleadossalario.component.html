@@ -1,0 +1,18 @@
+<h1>Buscador Api empleados</h1>
+<form #salariosForm="ngForm">
+    <input class="form-control" type="number" #cajasalario name="cajasalario">
+    <button class="btn btn-success" (click)="buscarEmpleados()"> Buscar Empleados</button>
+</form>
+<hr/>
+<table class="table table-bordered table-dark">
+    <thead>
+        <th>APELLIDO</th>
+        <th>SALARIO</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empleados">
+           <td>{{emp.apellido}}</td> 
+           <td>{{emp.salario}}</td> 
+        </tr>
+    </tbody>
+</table>

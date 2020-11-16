@@ -1,0 +1,20 @@
+<h1>Buscador Api empleados por oficio</h1>
+<form #oficiosForm="ngForm">
+    <select class="form-control" #cajaoficio name="cajaoficio">
+        <option *ngFor="let oficio of oficios" value="{{oficio}}">{{oficio}}</option>
+    </select>
+    <button class="btn btn-success" (click)="buscarEmpleados()"> Buscar Empleados</button>
+</form>
+<hr/>
+<table class="table table-bordered table-dark">
+    <thead>
+        <th>APELLIDO</th>
+        <th>SALARIO</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empleados">
+           <td>{{emp.apellido}}</td> 
+           <td>{{emp.salario}}</td> 
+        </tr>
+    </tbody>
+</table>

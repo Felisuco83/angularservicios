@@ -1,0 +1,15 @@
+<h1>Peticion get a un servicio API</h1>
+<table border="1">
+    <thead>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of personas">
+            <td> {{person.Nombre}}</td>
+            <td> {{person.Email}}</td>
+            <td> {{person.Edad}}</td>
+        </tr>
+    </tbody>
+</table>
